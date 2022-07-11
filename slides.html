@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<title>StopWatch - Coming Soon Html5 Template by Josweb | ThemeForest</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="https://kit.fontawesome.com/b179d3bb4a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <!--[if lt IE 10]>
+	<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+	<![endif]-->
+</head>
+	<body>
+	<div id="bodybg"></div>
+      <div class="wrapper">
+		<div class="container">
+			<div class="logo"><img src="images/colored-logo.png"/></div>
+			<div class="sp-container">
+			<!-- <h1>&#126; stopwatch studios &#126;</h1> -->
+			
+				<div class="sp-content">
+				<!-- LEFT TEXT -->
+					<div class="sp-wrap sp-left">
+						<h2>
+							<span class="sp-top">We're nearly there</span> 
+							<span class="sp-mid">GOD,</span> 
+							<span class="sp-bottom">Offering the most</span>
+						</h2>
+					</div>
+					<!-- RIGHT TEXT -->
+					<div class="sp-wrap sp-right">
+						<h2>
+							<span class="sp-top">Not long now</span> 
+							<span class="sp-mid">SAVE ME!</span> 
+							<span class="sp-bottom">prosperous crusade</span> 
+							<!-- <i>...</i><i>...</i> -->
+						</h2>
+					</div>
+				</div>
+				<!-- BIG TEXT AND LINK BUTTON -->
+				<div class="sp-full">
+					<h2 class="sp-volunteer">Would you like to be a volunteer in Ibadan, Oyo State?</h2>
+					<a href="#" data-reveal-id="myModal">Sign up now!</a>
+					<p class="beneath">3 days crusade 275h -29th Oct 2022</p>
+					<p class="beneath">Time: 3PM -8PM</p>
+				</div>
+			</div>
+		</div>
+		
+	<!-- DROP DOWN BOX STARTS -->
+          <div id="myModal" class="reveal-modal">
+            	<h1>COUNT DOWN TO THE IBADAN CRUSADE 2022</h1>
+
+            <p>OLAOLUWA OLADEINDE MINISTRIES is an Evangelical Ministry to perfect 
+				and redeem lost souls through God's word. 
+				The overall focus is on the CROSS and REPENTANCE sermon irrespective of the location,
+				 and the ministry is an inter-denominational.</p>
+
+            <!-- COUNTDOWN -->
+            <div class="counter">
+              <div id="launch_date"></div>
+            </div>
+            <!--END COUNTDOWN-->
+
+            <!-- COUNTDOWN - ADD YOUR DATE HERE-->
+            <script type="text/javascript">
+              //<![CDATA[
+              $(document).ready(function ()
+              {
+                var austDay = new Date("14: 55 October27 , 2022 ");
+                $('#launch_date').countdown(
+                {
+                  until: austDay,
+                  layout: '<ul class="countdown"><li><span class="number">{dn}<\/span><br/><span class="time">{dl}<\/span><\/li><li><span class="number">{hn}<\/span><br/><span class="time">{hl}<\/span><\/li><li><span class="number">{mn}<\/span><br/><span class="time">{ml}<\/span><\/li><li><span class="number">{sn}<\/span><br/><span class="time">{sl}<\/span><\/li><\/ul>'
+                });
+                $('#year').text(austDay.getFullYear());
+              });
+              //]]>
+            </script>
+
+	
+
+            <!-- EMAIL UPDATES -->
+            <div class="details">
+				<div class="drop-down" action="send.php">
+					<select name="role" id="role" onChange="update()">
+						<option value="--">--choose a preferred role--</option>
+    					<option value="usher" id="s-1">Usher</option>
+ 						<option value="counsellor"id="s-2">Counsellor</option>
+ 						<option value="security" id="s-3">Security</option>
+  						<option value="media" id="s-4">Media</option>
+						  <option value="sound" id="s-5">Sound</option>
+						  <option value="medical" id="s-6">Medical</option>
+						  <option value="prayer" id="s-7">Prayer</option>
+						  <option value="logistics" id="s-8">Logistics</option>
+						  <option value="pr" id="s-9">PR</option>
+					</select>
+
+					<script type="text/javascript">
+						function update() {
+							var select = document.getElementById('role');
+							var option = select.options[select.selectedIndex];
+							console.log(option.value)
+
+							document.getElementById("p").textContent= [option.value]
+						}
+					</script>
+				</div>
+              <form action="send.php" id="contact_form" method="POST" name="contact_form">
+                <div id="email_input">
+                  <input type="text" name="email" id="email" value="Enter Your Email For Updates"
+                  class="email requiredField" onfocus="if(this.value == 'Enter Your Email For Updates') 
+	{ this.value = ''; }" onblur="if(this.value == '') { this.value = 'Enter Your Email For Updates'; }"
+                  />
+				  <p id="p" name="description"></p>
+                  <button type="submit" id="submit" value="SUBMIT">SUBMIT</button>
+                </div>
+              </form>
+            </div>
+
+		<!-- SOCIAL ICONS -->
+            <div id="social">
+              <div id="icons">
+				<a href="https://www.facebook.com/theooministries"><i class="fab fa-facebook fa-2x"></i></a> 
+                <!-- <a href="#"><img src="images/email.png" width="32" height="32" alt="email" /></a>	
+				<a href="#"><img src="images/linkedin.png" width="32" height="32" alt="linkedin" /></a>  -->
+				<a href="https://twitter.com/theooministries"><i class="fab fa-twitter fa-2x"></i></a>
+				<!-- <a href="#"><img src="images/dribbble.png" width="32" height="32" alt="dribbble" /></a> 
+				<a href="#"><img src="images/forrst.png" width="32" height="32" alt="forrst" /></a> -->
+				<!-- <a href="#"><img src="images/youtube.png" width="32" height="32" alt="youtube" /></a> -->
+				<!-- <a href="#"><img src="images/behance.png" width="32" height="32" alt="behance" /></a>
+				<a href="#"><img src="images/flickr.png" width="32" height="32" alt="flickr" /></a> 
+				<a href="#"><img src="images/deviantart.png" width="32" height="32" alt="deviantart" /></a> -->
+				<!-- <a href="#"><img src="images/vimeo.png" width="32" height="32" alt="vimeo" /></a> -->
+				<a href="https://www.youtube.com/channel/UCzUbbzBSYsVmkTk0pBuMp_w"><i class="fab fa-youtube fa-2x" ></i></a>
+				<a href="https://www.tiktok.com/@theooministries"><i class="fab fa-tiktok fa-2x"></i></a>
+				<a href="https://www.instagram.com/theooministries/"><i class="fab fa-instagram fa-2x" ></i></a>
+              </div>
+            </div>
+			
+			<!-- CLOSE BUTTON -->
+			<a class="close-reveal-modal">&#215;</a>
+			</div>
+          </div>
+	
+	
+<!-- YOUR BACKGROUND IMAGES SETTINGS -->
+	<script type="text/javascript">
+	jQuery(function($){
+		$.supersized({
+		// Functionality
+		slide_interval : 3000,	// Length between transitions
+		transition : 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+		transition_speed : 2000, // Speed of transition
+		slides : [ // Slideshow Images
+			{image : 'images/DSC_7987.jpg'},
+			{image : 'images/DSC_8472.jpg'},
+			{image : 'images/Web.jpg'},
+			]
+			});
+		    });
+		</script>
+	</body>
+</html>

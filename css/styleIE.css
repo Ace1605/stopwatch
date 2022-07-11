@@ -1,0 +1,36 @@
+/* === move word 'coming' === */
+.sp-left span.sp-mid {
+	position: absolute;
+	top:-60px;
+	left:50px;
+}
+/* === move word 'soon' === */
+.sp-right span.sp-mid {
+	position: absolute;
+	top:-60px;
+	left:40px;
+}
+
+.sp-right span.sp-mid i{
+	display: none;
+}
+.sp-wrap {
+	outline: 0px dashed #333;
+	background: transparent;
+}
+
+.sp-content {
+	width: 100%;  
+	height:100%;
+	border:none;
+	position: relative;
+}
+
+.sp-content:after {
+	content: '';
+	width: 0px;
+	background: #000;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+}
