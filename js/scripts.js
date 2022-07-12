@@ -15,7 +15,7 @@
  Listener for data-reveal-id attributes
 ----------------------------*/
 
-	$('[data-reveal-id]').live('click', function(e) {
+	$('body').on('click', '#modal', function(e) {
 		e.preventDefault();
 		var modalLocation = $(this).attr('data-reveal-id');
 		$('#'+modalLocation).reveal($(this).data());
