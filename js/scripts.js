@@ -180,7 +180,7 @@ $(document).ready(function() {
             	var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
             	if(!emailReg.test(jQuery.trim($(this).val()))) {
             		var labelText = $(this).prev('label').text();
-            		$(this).parent().append('<span class="error">add your email'+labelText+'</span>');
+            		$(this).parent().append('<span class="error">input email'+labelText+'</span>');
             		$(this).addClass('inputError');
             		hasError = true;
             	}
@@ -208,7 +208,7 @@ $(document).ready(function() {
 ***************************************************/
 /*
  * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/ - Open source under the BSD License. 
- * Copyright å© 2008 George McGinley Smith
+ * Copyright ï¿½ 2008 George McGinley Smith
  * All rights reserved.
  * Redistribution and use in source and binary forms, with or without modification, 
  * are permitted provided that the following conditions are met:
@@ -236,7 +236,7 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
  * 
  * Open source under the BSD License. 
  * 
- * Copyright å© 2001 Robert Penner
+ * Copyright ï¿½ 2001 Robert Penner
  * All rights reserved.
  * 
  * Redistribution and use in source and binary forms, with or without modification, 
