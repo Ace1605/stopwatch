@@ -93,7 +93,7 @@
 
             <!-- EMAIL UPDATES -->
             <div class="details">
-				<div class="drop-down" action="send.php">
+				<div class="drop-down">
 					<select name="role" id="role" onChange="update()">
 						<option value="--">--choose a preferred role--</option>
     					<option value="usher" id="s-1">Usher</option>
@@ -117,7 +117,7 @@
 						}
 					</script>
 				</div>
-              <form action="send.php" id="contact_form" method="POST" name="contact_form">
+              <form action="send.php" id="contact_form" method="post" name="contact_form">
                 <div id="email_input">
                   <input type="text" name="email" id="email" value="Enter Your Email For Updates"
                   class="email requiredField" onfocus="if(this.value == 'Enter Your Email For Updates') 
