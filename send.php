@@ -18,7 +18,7 @@ $email_to = "achugoebuka1@gmail.com";
 
 $email = $_POST["email"];
 
-$text = "EMAIL: $email" +  " desired role is $detail";
+$text = "EMAIL: $email".  " desired role is $detail";
 
 $headers = "MIME-Version: 1.0" . "\r\n"; 
 
@@ -26,7 +26,7 @@ $headers .= "Content-type:text/html; charset=utf-8" . "\r\n";
 
 $headers .= "From: <$email>" . "\r\n";
 
-mail($email_to, "Message", $text, $headers);
+mail($email_to, $text, $headers);
 
 ?>
 
