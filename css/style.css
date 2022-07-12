@@ -94,6 +94,20 @@ h1 {
 	margin: 50px auto 70px;
 }
 
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-container{
+		max-width: 40rem;
+		min-width: 30rem;
+	}
+}
+
+@media (max-width: 768px){
+	.sp-container{
+		max-width: 35rem;
+		min-width: 20rem;
+	}
+}
+
 .sp-content {
 	width: 100%;  
 	height:100%;
@@ -120,6 +134,24 @@ h1 {
 	background: #222 url(../images/texture1.jpg) repeat;
 	overflow: hidden; filter: alpha(opacity=0.85);
 	opacity: 0.95;
+	
+	
+}
+
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-wrap{
+		max-width: 18rem;
+		min-width: 10rem;
+		padding: 0 1rem;
+	}
+}
+
+@media (max-width: 768px){
+	.sp-wrap{
+		max-width: 15.5rem;
+		min-width: 14rem;
+		padding: 0 1rem;
+	}
 }
 /* === remove stitching from opera === */
 doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
@@ -141,6 +173,12 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 	line-height: 80px;
 }
 
+@media (max-width: 768px){
+	.sp-container .sp-left h2, .sp-container .sp-right h2{
+		font-size: 1.5rem;
+	}
+}
+
 /* === bold middle text === */
 .sp-wrap span.sp-mid {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -155,11 +193,17 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 	text-shadow: 3px 3px 0px #999, 2px 2px 0px #666;
 }
 
+@media (max-width: 768px){
+	.sp-wrap span.sp-mid{
+		font-size: 2.5rem;
+	}
+}
+
 /* === colour changng dots === */
 .sp-wrap i {
 	position: absolute;
 	font-size:80px;
-	color: #dc0308 ;
+	color: #dc0308;
 	text-shadow:none;
 	top:8px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -183,15 +227,31 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 /* === large text === */
 .sp-full {
 	position: absolute;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	font-size: 65px;
 	top: 240px;
-	width: 50rem;
+	max-width: 60rem;
+	min-width: 50rem;
 	left: 40px;
 	line-height:70px;
 	-webkit-animation: fadeIn 1s linear 6.6s backwards;
 	-moz-animation: fadeIn 1s linear 6.6s backwards;
 	-ms-animation: fadeIn 1s linear 6.6s backwards;
 	animation: fadeIn 1s linear 6.6s backwards;
+}
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-full{
+		max-width: 45rem;
+		min-width: 38rem;
+		top: 10rem;
+	}
+}
+@media (max-width: 768px){
+	.sp-full{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
 }
 .sp-full h2 {
 	width: 400px;
@@ -201,8 +261,37 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 	color: #fff;
 	text-shadow: 0px 1px 1px #000;
 }
+
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-full h2{
+		max-width: 20rem;
+		min-width: 15rem;
+		line-height:1.8;
+	}
+}
+@media (max-width: 768px){
+	.sp-full h2{
+		padding: 0 0 0 1rem;
+	}
+}
 .sp-full .sp-volunteer{
 	font-size: 3rem;
+}
+
+@media (max-width: 768px){
+	.sp-full .sp-div{
+		text-align: center;
+		max-width: 30rem;
+		min-width: 25rem;
+	}
+}
+
+
+
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-full .sp-volunteer{
+		font-size: 2rem;
+	}
 }
 /* === sign up button === */
 .sp-full a {
@@ -240,6 +329,14 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 	font-size: 1.5rem;
 	font-weight: 600;
 	line-height:1.5;
+}
+
+@media (max-width: 1001px) and (min-width: 769px ){
+	.sp-full .beneath{
+		font-size: 1rem;
+	font-weight: 400;
+	line-height:1.5;
+	}
 }
 
 /* === animation timings === */
@@ -319,6 +416,12 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
     -webkit-box-shadow: 0 0 5px 2px #111;
     box-shadow: 0 0 5px 2px #111;
  	text-align:center;
+}
+
+@media (max-width: 768px){
+	.reveal-modal{
+		top: 10rem;
+	}
 }
 
 a.close-reveal-modal:hover { color: #fff; }

@@ -1,28 +1,3 @@
-<?php
-$message_sent = false;
-if (isset($_POST['email']) && $_POST['email'] != ''){
-
-    $detail = $_POST["description"];
-    echo $detail;
-    
-    $email_to = "achugoebuka1@gmail.com";
-    
-    $email = $_POST["email"];
-    
-    $text = "EMAIL: $email".  " desired role is $detail";
-    
-    $headers = "MIME-Version: 1.0" . "\r\n"; 
-    
-    $headers .= "Content-type:text/html; charset=utf-8" . "\r\n"; 
-    
-    $headers .= "From: <$email>" . "\r\n";
-
-    $message_sent = true;
-    
-    // mail($email_to, $text, $headers);
-}
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -31,21 +6,25 @@ if (isset($_POST['email']) && $_POST['email'] != ''){
 </head>
 <body>
 
+<?php
 
+$email_to = "add your email address here";
 
-<?php 
- if ($message_sent):
+$email = $_POST["email"];
+
+$text = "EMAIL: $email";
+
+$headers = "MIME-Version: 1.0" . "\r\n"; 
+
+$headers .= "Content-type:text/html; charset=utf-8" . "\r\n"; 
+
+$headers .= "From: <$email>" . "\r\n";
+
+mail($email_to, "Message", $text, $headers);
+
 ?>
-<h3>Message sent</h3>
 
-<?php 
- else:
-?>
-<h3>Message not sent</h3>
 
-<?php 
-endif;
-?>
 
 </body>
 
