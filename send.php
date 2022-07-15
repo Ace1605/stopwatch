@@ -7,18 +7,15 @@
 <body>
 
 <?php
-
-// $Sanitizer = filter_var_array($_POST, FILTER_SANITIZE_STRING);
-
-// $value = $Sanitizer[]
-$detail = $_POST["description"];
-echo $detail;
+if(isset ($_POST["email"]) && $_POST["description"])
+{
+        $details = $_POST["description"];
 
 $email_to = "achugoebuka1@gmail.com";
 
 $email = $_POST["email"];
 
-$text = "EMAIL: $email" +  " desired role is $detail";
+$text = "EMAIL: $email". " and my preferred role is ". $details;
 
 $headers = "MIME-Version: 1.0" . "\r\n"; 
 
@@ -27,6 +24,8 @@ $headers .= "Content-type:text/html; charset=utf-8" . "\r\n";
 $headers .= "From: <$email>" . "\r\n";
 
 mail($email_to, "Message", $text, $headers);
+}
+
 
 ?>
 

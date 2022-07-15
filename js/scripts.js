@@ -174,18 +174,33 @@
 		$('form#contact_form').submit(function() {
 			$('form#contact_form .error').remove();
 			var hasError = false;
+			$('.neededField').each(function() {
+				if(jQuery.trim($(this).val()) == '') {
+					hasError=true;
+					$(this).parent().append('<span class="dropdown-error">Missing details</span>');
+				} else if($(this).hasClass('describe')) {
+					var inputReg = /^(\w+[a-z]{2,4})$/;
+					if(!inputReg.test(jQuery.trim($(this).val()))) {
+						var labelText = $(this).prev('label').text();
+						$(this).parent().append('<span class="error">Missing details'+labelText+'</span>');
+						$(this).addClass('inputError');
+						hasError = true;
+					}
+				}
+			})
 			$('.requiredField').each(function() {
 				if(jQuery.trim($(this).val()) == '') {
 				} else if($(this).hasClass('email')) {
 					var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 					if(!emailReg.test(jQuery.trim($(this).val()))) {
 						var labelText = $(this).prev('label').text();
-						$(this).parent().append('<span class="error">add your email'+labelText+'</span>');
+						$(this).parent().append('<span class="error">Input your email'+labelText+'</span>');
 						$(this).addClass('inputError');
 						hasError = true;
 					}
 				}
 			});
+	
 			if(!hasError) {
 				$('form#contact_form input.submit').fadeOut('normal', function() {
 					$(this).parent().append('');
