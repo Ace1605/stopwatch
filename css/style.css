@@ -464,14 +464,14 @@ doesnotexist:-o-prefocus, .sp-wrap { outline: none; }
 
 @media (max-width: 1001px) and (min-width: 356px ){
 	.sp-full .beneath{
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	font-weight: 400;
 	line-height:1.4;
 	}
 }
 @media (max-width: 355px) {
 	.sp-full .beneath{
-		font-size: 1rem;
+		font-size: 0.9rem;
 	font-weight: 400;
 	line-height:1.4;
 	}
